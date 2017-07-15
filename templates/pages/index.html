@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Bundyfx</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/main.css') }}">
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<p>Bundyfx - Example.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a class="logo">SQS</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="">Example</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://twitter.com/bundyfx" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/bundyfx" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<form action="{{ url_for('main_page.send') }}" method="post">
+									First name:<br>
+									<input type="text" name="firstname"><br>
+									Last name:<br>
+									<input type="text" name="lastname"><br><br>
+									Your Vote:<br>
+									<select name="choice"><br>
+										<option value="volvo">Volvo</option>
+										<option value="mercedesbenz">Mercedes Benz</option>
+										<option value="bmw">BMW</option>
+										<option value="audi">Audi</option>
+									</select>
+									<input type="submit" value="Submit">
+									</form>
+								</header>
+							</article>
+
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Bundyfx</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+	</body>
+</html>
